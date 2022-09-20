@@ -7,6 +7,9 @@ export const counterSlice = createSlice({
   name: 'counter',
   initialState,
   reducers: {
+    clearError: (state) => {
+      state.error = undefined;
+    },
     increment: (state) => {
       state.counter += 1;
     },
@@ -69,5 +72,5 @@ export const throwError = createAsyncThunk(
 );
 
 // Default boilerplate
-export const { increment, decrement, incrementByAmount } = counterSlice.actions;
+export const { clearError,increment, decrement, incrementByAmount } = counterSlice.actions;
 export default counterSlice.reducer;
