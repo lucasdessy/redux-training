@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import { TypedUseSelectorHook, useDispatch, useSelector } from 'react-redux';
 import { counterSlice } from './application/counter/counter_slice';
 
+// Slices are registered here
 export const store = configureStore({
   reducer: {
     counter: counterSlice.reducer,
