@@ -2,11 +2,13 @@ import { useState } from 'react';
 
 // Actions from slice
 import { decrement, increment, incrementAsync, incrementByAmount, throwError } from '../../../application/counter/counter_slice';
-// Boilerplate hooks
+
 import { useAppDispatch } from '../../../redux';
 
 export const CounterActionsComponent = () => {
   const dispatch = useAppDispatch();
+
+  // Local state, will be dispatched to the store once the user clicks on the button
   const [incrementAmount, setIncrementAmount] = useState(0);
 
   return (

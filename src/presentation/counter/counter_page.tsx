@@ -1,9 +1,12 @@
 import { clearError } from '../../application/counter/counter_slice';
+// Boilerplate hooks
 import { useAppDispatch, useAppSelector } from '../../redux';
 import { CounterActionsComponent } from './components/counter';
 
 export const CounterPage = () => {
+  // Selects which part of the global state we're interested in
   const counter = useAppSelector((state) => state.counter);
+  // Provides access to the dispatch function
   const dispatch = useAppDispatch();
   return (
     <div>
